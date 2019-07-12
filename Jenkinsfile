@@ -1,11 +1,11 @@
 node {  
     stage('--clean--') { 
-         sh "mvn -f pom.xml clean"
+         sh "mvn clean"
     }
     stage('--Test--') { 
-        sh "mvn -f pom.xml test"
+        sh "mvn test"
     }
     stage('--Deploy--') { 
-        "mvn -f pom.xml package"
+        sh "mvn package"
     }
 }
